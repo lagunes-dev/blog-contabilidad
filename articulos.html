@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículos - Catálogo Completo | ContaBlog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <div id="app">
+        <!-- Navbar -->
+        <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm" id="navbar">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+                        <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-brand-gold transition-colors">CB</div>
+                        <span class="font-playfair text-2xl font-bold text-brand-blue tracking-tight">ContaBlog</span>
+                    </a>
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="index.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Inicio</a>
+                        <a href="articulos.html" class="text-brand-blue font-bold border-b-2 border-brand-gold py-2">Artículos</a>
+                        <a href="herramientas-calculadoras.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Herramientas</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-32 pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12 text-center">
+                    <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-4">Catálogo de Conocimiento</h1>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Explora nuestra colección completa de artículos técnicos, normativas y guías prácticas desarrolladas por la comunidad académica de la UJAT.</p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- Main Catalog Grid -->
+                    <div class="w-full lg:w-2/3">
+                        <div class="grid gap-8" id="articles-grid">
+                            <!-- Article 5 (NIF B-10) - Featured In Catalog -->
+                            <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
+                                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto flex items-center justify-center bg-gray-50 border-r border-gray-100">
+                                    <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="NIF B-10" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="click-badge bg-brand-gold text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Normativa Avanzada</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
+                                        <a href="nif-b10-inflacion.html">5. NIF B-10: Reconocimiento de los Efectos de la Inflación</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 line-clamp-3">Aprende a identificar entornos inflacionarios, la diferencia entre partidas monetarias y no monetarias, y el impacto del REPOMO en los estados financieros.</p>
+                                    <a href="nif-b10-inflacion.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue mt-auto transition-colors">
+                                        Leer artículo completo &rarr;
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- Article 1 -->
+                            <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
+                                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto flex items-center justify-center bg-gray-50 border-r border-gray-100">
+                                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cuentas por cobrar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="click-badge bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Conceptos Generales</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
+                                        <a href="cuentas-por-cobrar.html">1. Introducción: Cuentas por Cobrar e Incobrables</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 line-clamp-3">Conoce qué son las cuentas por cobrar y por qué algunas deudas se terminan convirtiendo en cuentas incobrables bajo la NIF C-3.</p>
+                                    <a href="cuentas-por-cobrar.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue mt-auto transition-colors">
+                                        Leer artículo completo &rarr;
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- Article 2 -->
+                            <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
+                                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto flex items-center justify-center bg-gray-50 border-r border-gray-100">
+                                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Provisión" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="click-badge bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Estados Financieros</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
+                                        <a href="provision-incobrables.html">2. La Provisión para Cuentas Incobrables</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 line-clamp-3">Descubre cómo la provisión protege la confiabilidad financiera anticipando pérdidas por ventas a crédito.</p>
+                                    <a href="provision-incobrables.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue mt-auto transition-colors">
+                                        Leer artículo completo &rarr;
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- Article 3 -->
+                            <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
+                                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto flex items-center justify-center bg-gray-50 border-r border-gray-100">
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Métodos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="click-badge bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Metodología Financiera</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
+                                        <a href="metodos-estimacion.html">3. Métodos de Estimación: Porcentajes y Antigüedad</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 line-clamp-3">Análisis técnico de las matrices de deterioro y el modelo de pérdida crediticia esperada (NIIF 9).</p>
+                                    <a href="metodos-estimacion.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue mt-auto transition-colors">
+                                        Leer artículo completo &rarr;
+                                    </a>
+                                </div>
+                            </article>
+
+                            <!-- Article 4 -->
+                            <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
+                                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto flex items-center justify-center bg-gray-50 border-r border-gray-100">
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Herramientas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute top-4 left-4">
+                                        <span class="click-badge bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Herramientas</span>
+                                    </div>
+                                </div>
+                                <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
+                                        <a href="herramientas-calculadoras.html">4. Calculadora de Provisión y Calculadora de ISR 2026</a>
+                                    </h3>
+                                    <p class="text-gray-600 mb-4 line-clamp-3">Utiliza nuestras herramientas interactivas automatizadas para determinar provisiones y calcular el ISR.</p>
+                                    <a href="herramientas-calculadoras.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue mt-auto transition-colors">
+                                        Leer artículo completo &rarr;
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="w-full lg:w-1/3 space-y-8">
+                        <!-- Search Widget -->
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h4 class="font-playfair text-xl font-bold mb-4 text-gray-900">Buscar en el Catálogo</h4>
+                            <div class="relative">
+                                <input type="text" id="catalog-search" placeholder="Ej. NIF B-10..." class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-all outline-none">
+                                <svg class="h-5 w-5 text-gray-400 absolute left-3 top-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="bg-[#0c233c] p-8 rounded-2xl shadow-xl text-white">
+                            <h4 class="font-playfair text-xl font-bold mb-6 flex items-center gap-2">
+                                <span class="w-1.5 h-6 bg-brand-gold rounded-full"></span>
+                                Categorías
+                            </h4>
+                            <div class="space-y-3" id="catalog-categories">
+                                <button data-cat="" class="cat-filter-btn active-cat w-full text-left px-4 py-3 rounded-xl transition-all font-medium flex justify-between items-center group">
+                                    <span>Todos los Temas</span>
+                                    <svg class="w-4 h-4 opacity-0 group-[.active-cat]:opacity-100" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" /></svg>
+                                </button>
+                                <button data-cat="Conceptos Generales" class="cat-filter-btn w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all text-gray-300">Conceptos Generales</button>
+                                <button data-cat="Estados Financieros" class="cat-filter-btn w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all text-gray-300">Estados Financieros</button>
+                                <button data-cat="Metodología Financiera" class="cat-filter-btn w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all text-gray-300">Metodología Financiera</button>
+                                <button data-cat="Normativa Avanzada" class="cat-filter-btn w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all text-gray-300">Normativa Avanzada</button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (Unified) -->
+        <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <div>
+                        <div class="flex items-center gap-2 mb-6 cursor-pointer group">
+                            <div class="w-8 h-8 flex items-center justify-center text-white font-bold text-lg border border-brand-gold rounded">CB</div>
+                            <span class="font-playfair text-2xl font-bold text-white tracking-tight">ContaBlog</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-6">Excelencia informativa por alumnos de la UJAT.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Enlaces Útiles</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="sobre-nosotros.html" class="hover:text-brand-gold">Sobre Nosotros</a></li>
+                            <li><a href="articulos.html" class="text-brand-gold font-bold">Catálogo</a></li>
+                            <li><a href="herramientas-calculadoras.html" class="hover:text-brand-gold">Calculadoras</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Legal</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="terminos.html" class="hover:text-brand-gold hover:underline">Términos</a></li>
+                            <li><a href="privacidad.html" class="hover:text-brand-gold hover:underline">Privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Contacto</h4>
+                        <p class="text-sm text-gray-400">DACEA - Villahermosa, Tabasco.<br>contacto@contablog.edu</p>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+                    <p>&copy; 2026 ContaBlog. Proyecto Escolar UX/UI - UJAT</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module">
+        // Simple reactivity for articulos.html
+        const searchInput = document.getElementById('catalog-search');
+        const articles = document.querySelectorAll('#articles-grid article');
+        const catBtns = document.querySelectorAll('.cat-filter-btn');
+
+        function filter() {
+            const query = searchInput.value.toLowerCase();
+            const activeCat = document.querySelector('.active-cat').dataset.cat;
+
+            articles.forEach(article => {
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const badge = article.querySelector('.click-badge').textContent.trim();
+                
+                const matchesSearch = title.includes(query);
+                const matchesCat = activeCat === "" || badge === activeCat;
+
+                if(matchesSearch && matchesCat) {
+                    article.style.display = 'flex';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', filter);
+        catBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                catBtns.forEach(b => {
+                    b.classList.remove('active-cat', 'bg-white/10');
+                    b.classList.add('text-gray-300');
+                });
+                btn.classList.add('active-cat', 'bg-white/10');
+                btn.classList.remove('text-gray-300');
+                filter();
+            });
+        });
+    </script>
+</body>
+</html>

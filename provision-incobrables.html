@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Provisión e Impacto Contable - ContaBlog</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <div id="app">
+      <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-20">
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
+              <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">CB</div>
+              <span class="font-playfair text-2xl font-bold text-brand-blue">ContaBlog</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+              <a href="index.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Inicio</a>
+              <a href="articulos.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 text-brand-blue font-bold">Artículos</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="pt-32 pb-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+          <span class="inline-block py-1 px-3 rounded-full bg-brand-blue/10 text-brand-blue font-semibold text-sm mb-6">Estados Financieros</span>
+          <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">2. La Provisión para Cuentas Incobrables y su Impacto Contable</h1>
+        </div>
+      </section>
+
+      <main class="max-w-4xl mx-auto px-4 pb-16">
+        <article class="prose prose-lg max-w-none text-gray-700">
+          <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">4. La Provisión: Basada en NIIF 9 y la Pérdida Esperada</h2>
+          <p>Históricamente, la contabilidad utilizaba un modelo de "pérdida incurrida" (esperar a que el cliente fallara para registrar el impacto). Sin embargo, tras recientes crisis financieras mundiales, estándares como la <strong>NIIF 9</strong> revolucionan esto introduciendo el <strong>Modelo de Pérdida Crediticia Esperada (PCE)</strong>.</p>
+          <p>La provisión para cuentas incobrables (oficialmente denominada <em>Estimación por pérdidas crediticias esperadas</em>) es un requerimiento normativo donde las empresas registran, desde el día uno del crédito, el riesgo de pérdida técnica en función a un pronóstico sustentable.</p>
+          <p>Esta cuenta especial (una cuenta complementaria o de "contra-activo"):</p>
+          <ul class="list-disc pl-5 mb-4">
+             <li>Nace con saldo acreedor en el balance.</li>
+             <li>Reduce directamente el valor bruto de la cuenta de Clientes para revelar el <strong>valor neto de realización</strong> (lo que realmente se espera cobrar).</li>
+          </ul>
+
+          <div class="bg-brand-blue/10 p-5 border-l-4 border-brand-blue rounded-r-lg my-6">
+            <p class="font-semibold mb-2 text-brand-blue">Doble Asiento Inicial</p>
+            <p class="text-sm">Al reconocer que la factura de un cliente de $100,000 USD cuenta con alta probabilidad técnica de insolvencia (ej. $5,000 USD de riesgo), contablemente se genera un CARGO a "Gastos de Operación por Cuentas Incobrables" y un ABONO a la cuenta complementaria de Activo "Estimación para Cuentas Incobrables". De esta forma, el derecho patrimonial baja a $95,000 USD netos en los libros sin necesidad de cancelar bruscamente la cuenta del cliente individualizado.</p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">5. El Impacto Contable y el Principio de Asociación</h2>
+          <p>Crear esta estimación obedece a uno de los postulados contables más sagrados: el <strong>Principio de Asociación de Costos y Gastos con Ingresos</strong>. La pérdida provocada por la falta de cobro debe registrarse en el mismo año en que se originó la venta, evitando distorsionar o sobrevalorar futuros periodos fiscales.</p>
+          
+          <h3 class="text-xl font-bold mt-6 text-gray-800 border-b pb-2">Afectación en el Estado de Resultados Integral</h3>
+          <p class="mt-2 text-brand-gold-dark font-medium">Gasto sin salida de efectivo (Non-Cash Expense)</p>
+          <p>Se asume el golpe financiero en el periodo actual "Gasto por incobrabilidad", golpeando drásticamente la utilidad neta antes de impuestos, pero no afecta la caja real porque jamás fue un dinero cobrado. En legislaciones fiscales mexicanas, este gasto puede llegar a ser deducible de impuestos (ISR) si se demuestran gestiones notariales y agote de cobro efectivo.</p>
+          
+          <h3 class="text-xl font-bold mt-6 text-gray-800 border-b pb-2">Afectación en el Estado de Situación Financiera (Balance)</h3>
+          <div class="bg-gray-100 p-5 rounded-lg my-4 font-mono text-sm border border-gray-200">
+            <p class="text-gray-500">// Extracto de Activo Circulante</p>
+            <p>Clientes (Facturas vigentes y morosas): $800,000</p>
+            <p class="text-red-500">(-) Estimación de Pérdidas Crediticias Esperadas: ($40,000)</p>
+            <p class="font-bold border-t border-gray-300 pt-2 mt-2">Cuentas por Cobrar Netas: $760,000</p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">6. La Verdadera Importancia de la Estimación</h2>
+          <p>Más allá del cumplimiento regulatorio de la NIIF, las empresas que miden el deterioro crediticio de su cartera logran:</p>
+          <ul class="list-disc pl-5 my-4 space-y-2">
+            <li>Prevenir que existan "dividendos ficticios" (repartir utilidades a los dueños sobre dinero que jamás entrará al banco).</li>
+            <li>Optimizar sus políticas pre-aprobatorias de crédito mitigando el riesgo al instante.</li>
+            <li>Sincerar los balances ante auditorías externas o financiamientos bancarios, mostrando gran ética y madurez financiera corporativa.</li>
+          </ul>
+          
+          <div class="mt-12">
+             <a href="index.html" class="inline-flex items-center text-brand-blue font-bold hover:underline">&larr; Volver al Índice Principal</a>
+          </div>
+        </article>
+      </main>
+    <!-- Footer -->
+    <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <!-- Brand Info -->
+          <div>
+            <div class="flex items-center gap-2 mb-6 cursor-pointer group">
+              <div
+                class="w-8 h-8 flex items-center justify-center text-white font-bold text-lg border border-brand-gold rounded group-hover:bg-brand-gold group-hover:text-brand-blue transition-colors duration-300">
+                CB
+              </div>
+              <span class="font-playfair text-2xl font-bold text-white tracking-tight">ContaBlog</span>
+            </div>
+            <p class="text-sm text-gray-400 mb-6">
+              Brindando excelencia informativa en el complejo mundo de la contabilidad, las finanzas y los impuestos
+              para profesionales del mañana.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">
+                <span class="sr-only">Twitter</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h4 class="text-white font-bold mb-4">Enlaces Útiles</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-brand-gold transition-colors">Sobre Nosotros</a></li>
+              <li><a href="articulos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Artículos</a></li>
+              <li><a href="herramientas-calculadoras.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calculadoras</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h4 class="text-white font-bold mb-4">Legal</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="terminos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Términos y Condiciones</a></li>
+              <li><a href="privacidad.html" class="text-gray-400 hover:text-brand-gold transition-colors">Política de Privacidad</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="text-white font-bold mb-4">Contacto</h4>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-3">
+                <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span class="text-gray-400">contacto@contablog.edu</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="text-gray-400">Ciudad Universitaria, Módulo 4</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+          <p>&copy; 2026 ContaBlog. Todos los derechos reservados para fines académicos.</p>
+          <p class="mt-2 md:mt-0">Proyecto Escolar UX/UI - UJAT</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
