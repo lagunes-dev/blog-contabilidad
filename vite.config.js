@@ -19,6 +19,7 @@ export default defineConfig({
         provision_incobrables: 'provision-incobrables.html',
         sobre_nosotros: 'sobre-nosotros.html',
         terminos: 'terminos.html',
+        calculadora_isr: 'calculadora-isr.html',
       },
     },
   },

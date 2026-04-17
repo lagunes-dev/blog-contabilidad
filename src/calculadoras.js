@@ -3,36 +3,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to animate a value counting up or down
     function animateValue(obj, start, end, duration) {
+        if (!obj) return;
         let startTimestamp = null;
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            
-            // Apply easeOutQuart easing for a premium feel
             const easeOutProgress = 1 - Math.pow(1 - progress, 4);
             const currentVal = Math.floor(easeOutProgress * (end - start) + start);
             
             obj.innerText = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(currentVal);
             
-            // Pop effect scaling
-            if (progress < 0.5) {
-                obj.style.transform = `scale(${1 + (progress * 0.1)})`;
-            } else {
-                obj.style.transform = `scale(${1 + ((1 - progress) * 0.1)})`;
-            }
-            
             if (progress < 1) {
                 window.requestAnimationFrame(step);
             } else {
-                // Ensure exact final value and reset scale
                 obj.innerText = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(end);
-                obj.style.transform = 'scale(1)';
             }
         };
         window.requestAnimationFrame(step);
     }
 
-    // --- 1. Provisión Calculator (Reactive) ---
+    // --- 1. Provisión / Estimación Calculator ---
     const ventasInput = document.getElementById('calc-ventas');
     const porcInput = document.getElementById('calc-porc');
     const resProvVal = document.getElementById('txt-prov-val');
@@ -43,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const ventas = parseFloat(ventasInput.value) || 0;
         const porc = parseFloat(porcInput.value) || 0;
-        
         const provision = ventas * (porc / 100);
         
         if (provision !== lastProvValue) {
@@ -57,7 +46,41 @@ document.addEventListener('DOMContentLoaded', () => {
         porcInput.addEventListener('input', calculateProvision);
     }
 
-    // --- 2. ISR Calculator (Reactive) ---
+    // --- 2. Statistical Analysis Logic ---
+    const btnStat = document.getElementById('btn-calc-stat');
+    const statPanel = document.getElementById('stat-justification');
+    const statText = document.getElementById('stat-text');
+
+    if (btnStat) {
+        btnStat.addEventListener('click', () => {
+            const data = [
+                { v: parseFloat(document.getElementById('h-v-2023').value) || 0, i: parseFloat(document.getElementById('h-i-2023').value) || 0 },
+                { v: parseFloat(document.getElementById('h-v-2024').value) || 0, i: parseFloat(document.getElementById('h-i-2024').value) || 0 },
+                { v: parseFloat(document.getElementById('h-v-2025').value) || 0, i: parseFloat(document.getElementById('h-i-2025').value) || 0 }
+            ];
+
+            const totalVentas = data.reduce((acc, curr) => acc + curr.v, 0);
+            const totalInco = data.reduce((acc, curr) => acc + curr.i, 0);
+
+            if (totalVentas > 0) {
+                const avgPorc = (totalInco / totalVentas) * 100;
+                porcInput.value = avgPorc.toFixed(2);
+                
+                // Show justification with calculated data
+                if (statPanel && statText) {
+                    statPanel.classList.remove('hidden');
+                    statText.innerHTML = `Relación técnica confirmada: Basado en un historial de <strong>$${totalVentas.toLocaleString()}</strong> en ventas frente a <strong>$${totalInco.toLocaleString()}</strong> en pérdidas reales, el promedio estadístico de incobrabilidad es del <strong>${avgPorc.toFixed(2)}%</strong>. Este valor es el que se presupuesta para el nuevo ejercicio.`;
+                }
+                
+                // Trigger calculation update
+                calculateProvision();
+            } else {
+                alert("Por favor ingresa datos históricos válidos para calcular el promedio.");
+            }
+        });
+    }
+
+    // --- 3. ISR Calculator (Independent Page) ---
     const regimenSelect = document.getElementById('calc-regimen');
     const ingresoInput = document.getElementById('calc-ingreso');
     const resIsrVal = document.getElementById('txt-isr-val');
@@ -69,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const regimen = regimenSelect.value;
         const ingreso = parseFloat(ingresoInput.value) || 0;
-
         let isr = 0;
         let detail = '';
 
@@ -91,13 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     { limInf: 149508.41, limSup: 448525.20, cuotaFija: 38961.96, porc: 0.3400 },
                     { limInf: 448525.21, limSup: Infinity, cuotaFija: 140627.67, porc: 0.3500 }
                 ];
-
                 const tarifa = tarifasMensuales2026.find(t => ingreso >= t.limInf && ingreso <= t.limSup);
-                
                 if (tarifa) {
                     const excedente = ingreso - tarifa.limInf;
-                    const impuestoMarginal = excedente * tarifa.porc;
-                    isr = tarifa.cuotaFija + impuestoMarginal;
+                    isr = tarifa.cuotaFija + (excedente * tarifa.porc);
                     detail = `Cuota ($${tarifa.cuotaFija.toFixed(2)}) + Exc. al ${(tarifa.porc*100).toFixed(2)}%`;
                 }
             }
@@ -107,10 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             animateValue(resIsrVal, lastIsrValue, isr, 600);
             lastIsrValue = isr;
         }
-
-        if (resIsrDetail) {
-            resIsrDetail.innerText = detail ? '*' + detail : '';
-        }
+        if (resIsrDetail) resIsrDetail.innerText = detail ? '*' + detail : '';
     }
 
     if (ingresoInput && regimenSelect) {

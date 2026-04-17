@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora ISR 2026 - Prisma Contable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
+    <div id="app">
+      <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-20">
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+              <img src="src/assets/logo-prisma.png" alt="Logo Prisma Contable" class="w-14 h-14 object-contain">
+              <span class="font-playfair text-2xl font-bold text-brand-blue tracking-tight">Prisma Contable</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+              <a href="index.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 hover:border-brand-gold transition-all">Inicio</a>
+              <a href="articulos.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 hover:border-brand-gold transition-all">Artículos</a>
+              <a href="herramientas-calculadoras.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 hover:border-brand-gold transition-all">Calc. Estimación</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <section class="pt-32 pb-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold-dark font-semibold text-sm mb-6">Herramientas Fiscales</span>
+          <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">Calculadora de ISR 2026</h1>
+          <p class="text-xl text-gray-600">Determinación automatizada para Personas Físicas y Morales bajo el marco fiscal vigente.</p>
+        </div>
+      </section>
+
+      <main class="max-w-3xl mx-auto px-4 pb-20">
+          <!-- ISR Tool -->
+          <div class="relative bg-white p-10 rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-brand-gold/20 flex flex-col overflow-hidden group mt-8">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-brand-gold/10 rounded-full -mr-32 -mt-32 blur-3xl transition-transform group-hover:scale-110 duration-700"></div>
+            
+            <div class="mb-10 relative z-10">
+              <div class="w-16 h-16 bg-brand-gold/20 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-4 tracking-tight">Cálculo de Impuesto</h2>
+              <p class="text-gray-500 font-medium text-lg text-balance">Módulo para la proyección mensual del Impuesto Sobre la Renta.</p>
+            </div>
+            
+            <div class="space-y-8 flex-grow relative z-10">
+              <div>
+                <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-widest text-xs">Régimen Fiscal</label>
+                <select id="calc-regimen" class="w-full px-6 py-5 rounded-2xl border border-gray-200 focus:ring-4 focus:ring-brand-gold/20 focus:border-brand-gold transition-all bg-gray-50 focus:bg-white text-xl font-medium cursor-pointer appearance-none">
+                  <option value="moral">Persona Moral (30%)</option>
+                  <option value="fisica">Persona Física (Tabla Progresiva)</option>
+                </select>
+              </div>
+              <div class="relative">
+                <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-widest text-xs">Ingreso Neto Gravable ($)</label>
+                <div class="relative">
+                  <span class="absolute left-6 top-5 text-gray-400 font-bold text-xl">$</span>
+                  <input type="number" id="calc-ingreso" class="w-full pl-12 pr-6 py-5 rounded-2xl border border-gray-200 focus:ring-4 focus:ring-brand-gold/20 focus:border-brand-gold transition-all bg-gray-50 focus:bg-white text-xl font-medium" placeholder="Ej. 45000">
+                </div>
+              </div>
+            </div>
+
+            <div id="res-isr" class="mt-12 p-10 bg-gradient-to-br from-[#0c233c] to-[#040f1a] rounded-3xl text-center relative z-10 shadow-2xl overflow-hidden border border-white/5">
+              <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+              <span class="block text-xs font-bold text-brand-gold-dark mb-3 uppercase tracking-[0.2em] relative z-10 flex items-center justify-center gap-3">
+                 <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span> ISR Determinado
+              </span>
+              <span class="block font-playfair text-6xl font-bold text-white mb-4 drop-shadow-md relative z-10 transition-all duration-300" id="txt-isr-val">$0.00</span>
+              <div class="flex flex-col gap-2 relative z-10">
+                <span class="inline-block text-sm font-mono text-brand-gold/80 bg-white/5 px-4 py-2 rounded-full empty:hidden mx-auto" id="txt-isr-detail"></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-12 p-8 bg-brand-blue/5 rounded-2xl border border-brand-blue/10">
+              <h4 class="font-bold text-brand-blue mb-2 flex items-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  Nota Académica
+              </h4>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                  Este cálculo se basa en las tablas y tarifas vigentes para el ejercicio fiscal 2026. Para Personas Físicas se utiliza el cálculo mensual progresivo, aplicando el límite inferior, cuota fija y porcentaje sobre el excedente según corresponda al rango de ingreso.
+              </p>
+          </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Brand Info -->
+            <div>
+              <div class="flex items-center gap-2 mb-6 cursor-pointer group">
+                <img src="src/assets/logo-prisma.png" alt="Logo Prisma Contable" class="w-10 h-10 object-contain">
+                <span class="font-playfair text-2xl font-bold text-white tracking-tight">Prisma Contable</span>
+              </div>
+              <p class="text-sm text-gray-400 mb-6">Excelencia informativa en contabilidad y finanzas para los profesionales del mañana.</p>
+            </div>
+
+            <!-- Links -->
+            <div>
+              <h4 class="text-white font-bold mb-4">Herramientas</h4>
+              <ul class="space-y-2 text-sm">
+                <li><a href="herramientas-calculadoras.html" class="text-gray-400 hover:text-brand-gold transition-colors">Estimación Incobrables</a></li>
+                <li><a href="articulos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Artículos</a></li>
+              </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+              <h4 class="text-white font-bold mb-4">Legal</h4>
+              <ul class="space-y-2 text-sm">
+                <li><a href="terminos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Términos</a></li>
+                <li><a href="privacidad.html" class="text-gray-400 hover:text-brand-gold transition-colors">Privacidad</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+              <h4 class="text-white font-bold mb-4">Contacto</h4>
+              <p class="text-sm text-gray-400">contacto@Prisma Contable.edu</p>
+            </div>
+          </div>
+          <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <p>&copy; 2026 Prisma Contable. Proyecto Escolar - UJAT</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Script logic -->
+    <script type="module" src="src/calculadoras.js"></script>
+  </body>
+</html>

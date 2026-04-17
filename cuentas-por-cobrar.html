@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introducción: Cuentas por Cobrar e Incobrables - ContaBlog</title>
+    <title>Introducción: Cuentas por Cobrar e Incobrables - Prisma Contable</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="/src/style.css">
   </head>
   <body class="bg-gray-50 text-gray-800 font-sans antialiased">
     <div id="app">
@@ -16,13 +16,16 @@
       <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-20">
-            <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-              <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">CB</div>
-              <span class="font-playfair text-2xl font-bold text-brand-blue">ContaBlog</span>
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+              <img src="src/assets/logo-prisma.png" alt="Logo Prisma Contable" class="w-14 h-14 object-contain">
+              <span class="font-playfair text-2xl font-bold text-brand-blue tracking-tight">Prisma Contable</span>
             </a>
+
             <nav class="hidden md:flex space-x-8">
               <a href="index.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Inicio</a>
               <a href="articulos.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 text-brand-blue font-bold">Artículos</a>
+              <a href="herramientas-calculadoras.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Calc. Estimación</a>
+              <a href="calculadora-isr.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Calc. ISR</a>
             </nav>
           </div>
         </div>
@@ -40,7 +43,6 @@
           <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">1. Inicio (Introducción)</h2>
           <p>Las <strong>cuentas incobrables</strong> representan las deudas de clientes que una empresa, tras agotar sus esfuerzos de cobranza, determina que probablemente no podrá recuperar. Para evitar que estas pérdidas impacten súbitamente el estado de resultados y engañen a los inversionistas sobre la liquidez real, las empresas constituyen una "provisión para cuentas incobrables" (o estimación por pérdidas crediticias).</p>
           <p>Bajo la normativa moderna, esta provisión no espera a que el cliente quiebre para ser registrada. Es una estimación anticipada que refleja de manera conservadora y realista el valor de los derechos de cobro, manteniendo intacta la confiabilidad estructural de la información financiera.</p>
-
           <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">2. El Marco Normativo de las Cuentas por Cobrar</h2>
           <p>Para entender las cuentas incobrables, primero debemos clasificar las cuentas por cobrar. Según la normativa contable, como la <strong>NIF C-3</strong> (Norma de Información Financiera en México) o las NIIF internacionales, las cuentas por cobrar son derechos exigibles de recibir efectivo u otros instrumentos financieros por transacciones pasadas.</p>
           <p>Se dividen típicamente en:</p>
@@ -76,11 +78,8 @@
           <!-- Brand Info -->
           <div>
             <div class="flex items-center gap-2 mb-6 cursor-pointer group">
-              <div
-                class="w-8 h-8 flex items-center justify-center text-white font-bold text-lg border border-brand-gold rounded group-hover:bg-brand-gold group-hover:text-brand-blue transition-colors duration-300">
-                CB
-              </div>
-              <span class="font-playfair text-2xl font-bold text-white tracking-tight">ContaBlog</span>
+              <img src="src/assets/logo-prisma.png" alt="Logo Prisma Contable" class="w-10 h-10 object-contain">
+              <span class="font-playfair text-2xl font-bold text-white tracking-tight">Prisma Contable</span>
             </div>
             <p class="text-sm text-gray-400 mb-6">
               Brindando excelencia informativa en el complejo mundo de la contabilidad, las finanzas y los impuestos
@@ -111,7 +110,8 @@
             <ul class="space-y-2 text-sm">
               <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-brand-gold transition-colors">Sobre Nosotros</a></li>
               <li><a href="articulos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Artículos</a></li>
-              <li><a href="herramientas-calculadoras.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calculadoras</a></li>
+              <li><a href="herramientas-calculadoras.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calc. Estimación</a></li>
+              <li><a href="calculadora-isr.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calculadora ISR</a></li>
             </ul>
           </div>
 
@@ -133,7 +133,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span class="text-gray-400">contacto@contablog.edu</span>
+                <span class="text-gray-400">contacto@Prisma Contable.edu</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -149,7 +149,7 @@
         </div>
         <div
           class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>&copy; 2026 ContaBlog. Todos los derechos reservados para fines académicos.</p>
+          <p>&copy; 2026 Prisma Contable. Todos los derechos reservados para fines académicos.</p>
           <p class="mt-2 md:mt-0">Proyecto Escolar UX/UI - UJAT</p>
         </div>
       </div>

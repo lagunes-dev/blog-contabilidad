@@ -1,139 +1,145 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ContaBlog - Expertos en Contabilidad y Finanzas</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-DsQupjkI.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DkxXNcAs.css">
-  </head>
-  <body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand-gold selection:text-white">
-    <div id="app">
-      <!-- Navbar -->
-      <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-20">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
-              <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:bg-brand-gold transition-colors duration-300">
-                CB
-              </div>
-              <span class="font-playfair text-2xl font-bold text-brand-blue tracking-tight">ContaBlog</span>
-            </div>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex space-x-8">
-              <a href="#" class="text-gray-600 hover:text-brand-blue font-medium transition-colors border-b-2 border-transparent hover:border-brand-gold py-2">Inicio</a>
-              <a href="#articulos" class="text-gray-600 hover:text-brand-blue font-medium transition-colors border-b-2 border-transparent hover:border-brand-gold py-2">Artículos</a>
-              <a href="#recursos" class="text-gray-600 hover:text-brand-blue font-medium transition-colors border-b-2 border-transparent hover:border-brand-gold py-2">Recursos NIIF</a>
-              <a href="#contacto" class="text-gray-600 hover:text-brand-blue font-medium transition-colors border-b-2 border-transparent hover:border-brand-gold py-2">Contacto</a>
-            </nav>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prisma Contable - Expertos en Contabilidad y Finanzas</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/blog-contabilidad/assets/main-CxdUnrD7.js"></script>
+  <link rel="modulepreload" crossorigin href="/blog-contabilidad/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="/blog-contabilidad/assets/style-Bei9yBCX.css">
+</head>
 
-            <!-- CTA Button -->
-            <div class="hidden md:flex items-center">
-              <a href="#boletin" class="bg-brand-blue text-white px-6 py-2.5 rounded-full font-medium hover:bg-brand-blue-light hover:shadow-lg transition-all transform hover:-translate-y-0.5">
-                Suscribirse
-              </a>
-            </div>
-
-            <!-- Mobile menu button -->
-            <div class="md:hidden flex items-center">
-              <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-blue focus:outline-none p-2 rounded-md">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0">
-          <div class="px-4 py-4 justify-between flex-row space-y-3 sm:px-3">
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Inicio</a>
-            <a href="#articulos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Artículos</a>
-            <a href="#recursos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Recursos NIIF</a>
-            <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Contacto</a>
-            <a href="#boletin" class="block px-3 py-2 mt-4 text-center rounded-md text-base font-medium bg-brand-blue text-white hover:bg-brand-blue-light">Suscribirse</a>
-          </div>
-        </div>
-      </header>
-
-      <!-- Hero Section -->
-      <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 z-0 opacity-10">
-          <svg class="absolute right-0 top-0 transform translate-x-1/3 -translate-y-1/4" width="800" height="800" fill="none" viewBox="0 0 800 800">
-            <circle cx="400" cy="400" r="400" fill="currentColor" class="text-brand-blue"/>
-          </svg>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/10 text-brand-gold-dark font-semibold text-sm mb-6 animate-fade-in-up">
-            Actualidad Financiera 2026
-          </span>
-          <h1 class="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.1s;">
-            Domina las finanzas con <br class="hidden md:block" />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-gold">claridad y precisión</span>
-          </h1>
-          <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto mb-10 animate-fade-in-up" style="animation-delay: 0.2s;">
-            Análisis experto, guías prácticas sobre NIIF, reformas tributarias y estrategias fiscales para profesionales y estudiantes.
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
-            <a href="#articulos" class="px-8 py-4 bg-brand-blue text-white rounded-full font-medium text-lg hover:bg-brand-blue-light hover:shadow-xl transition-all transform hover:-translate-y-1">
-              Leer Artículos
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand-gold selection:text-white">
+  <div id="app">
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300"
+      id="navbar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+              <img src="/blog-contabilidad/assets/logo-prisma-D8ZPfh8l.png" alt="Logo Prisma Contable" class="w-14 h-14 object-contain">
+              <span class="font-playfair text-2xl font-bold text-brand-blue tracking-tight">Prisma Contable</span>
             </a>
-            <a href="#recursos" class="px-8 py-4 bg-white text-brand-blue border border-gray-200 rounded-full font-medium text-lg hover:border-brand-blue hover:text-brand-blue-light transition-all shadow-sm hover:shadow-md">
-              Herramientas Gratuitas
-            </a>
+
+          <!-- Desktop Menu -->
+          <nav class="hidden md:flex space-x-8">
+            <a href="#"
+              class="text-gray-600 hover:text-brand-blue font-medium transition-colors border-b-2 border-transparent hover:border-brand-gold py-2">Inicio</a>
+            <a href="articulos.html"
+              class="text-gray-600 hover:text-brand-blue font-medium transition-colors border-b-2 border-transparent hover:border-brand-gold py-2">Artículos</a>
+            <a href="herramientas-calculadoras.html"
+              class="text-gray-600 hover:text-brand-blue font-medium transition-colors border-b-2 border-transparent hover:border-brand-gold py-2">Calc. Estimación</a>
+            <a href="calculadora-isr.html"
+              class="text-gray-600 hover:text-brand-blue font-medium transition-colors border-b-2 border-transparent hover:border-brand-gold py-2">Calc. ISR</a>
+          </nav>
+
+          <!-- CTA Button removed as requested -->
+          <div class="hidden md:flex items-center">
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-blue focus:outline-none p-2 rounded-md">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Main Content -->
-      <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="articulos">
-        <div class="flex flex-col lg:flex-row gap-12">
-          
-          <!-- Articles Column -->
-          <div class="w-full lg:w-2/3">
-            <div class="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
-              <h2 class="font-playfair text-3xl font-bold text-gray-900">Últimos Artículos</h2>
-              <div class="hidden sm:flex gap-2">
-                <button class="px-4 py-1 text-sm rounded-full bg-brand-blue text-white cursor-pointer hover:bg-brand-blue-light transition-colors">Todos</button>
-                <button class="px-4 py-1 text-sm rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 cursor-pointer transition-colors">Impuestos</button>
-                <button class="px-4 py-1 text-sm rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 cursor-pointer transition-colors">Auditoría</button>
-              </div>
-            </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0">
+        <div class="px-4 py-4 justify-between flex-row space-y-3 sm:px-3">
+          <a href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Inicio</a>
+          <a href="articulos.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Artículos</a>
+          <a href="herramientas-calculadoras.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Calc. Estimación</a>
+          <a href="calculadora-isr.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Calculadora ISR</a>
+        </div>
+      </div>
+    </header>
 
-            <div class="grid gap-8">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 z-0 opacity-10">
+        <svg class="absolute right-0 top-0 transform translate-x-1/3 -translate-y-1/4" width="800" height="800"
+          fill="none" viewBox="0 0 800 800">
+          <circle cx="400" cy="400" r="400" fill="currentColor" class="text-brand-blue" />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <span
+          class="inline-block py-1 px-3 rounded-full bg-brand-gold/10 text-brand-gold-dark font-semibold text-sm mb-6 animate-fade-in-up">
+          Actualidad Financiera 2026
+        </span>
+        <h1
+          class="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in-up"
+          style="animation-delay: 0.1s;">
+          Domina las finanzas con <br class="hidden md:block" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-gold">claridad y
+            precisión</span>
+        </h1>
+        <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto mb-10 animate-fade-in-up" style="animation-delay: 0.2s;">
+          Análisis experto, guías prácticas sobre NIIF, reformas tributarias y estrategias fiscales para profesionales y
+          estudiantes.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.3s;">
+          <a href="articulos.html"
+            class="px-8 py-4 bg-brand-blue text-white rounded-full font-medium text-lg hover:bg-brand-blue-light hover:shadow-xl transition-all transform hover:-translate-y-1">
+            Leer Artículos
+          </a>
+          <a href="herramientas-calculadoras.html"
+            class="px-8 py-4 bg-white text-brand-blue border border-gray-200 rounded-full font-medium text-lg hover:border-brand-blue hover:text-brand-blue-light transition-all shadow-sm hover:shadow-md">
+            Calculadora Estadística
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="articulos">
+      <div class="flex flex-col lg:flex-row gap-12">
+
+        <!-- Articles Column -->
+        <div class="w-full lg:w-2/3">
+          <div class="mb-8 border-b border-gray-200 pb-4">
+            <h2 class="font-playfair text-3xl font-bold text-gray-900">Últimos Artículos</h2>
+          </div>
+
+          <div class="grid gap-8">
               <!-- Article Card 1 -->
               <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
-                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto">
-                  <div class="absolute inset-0 bg-gray-200"></div>
-                  <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Contabilidad moderna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto border-r border-gray-100 flex items-center justify-center bg-gray-50">
+                  <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cuentas por cobrar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                   <div class="absolute top-4 left-4">
-                    <span class="bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Normativa</span>
+                    <span class="click-badge cursor-pointer hover:bg-brand-blue hover:text-white transition-colors bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Conceptos Generales</span>
                   </div>
                 </div>
                 <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
-                  <div class="flex items-center text-sm text-gray-500 mb-3 gap-4">
-                    <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> 24 Oct, 2026</span>
-                    <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 5 min read</span>
-                  </div>
                   <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
-                    <a href="#">Impacto de las nuevas NIIF en el cierre fiscal anual</a>
+                    <a href="cuentas-por-cobrar.html">1. Introducción: Cuentas por Cobrar e Incobrables</a>
                   </h3>
                   <p class="text-gray-600 mb-4 line-clamp-3">
-                    Un análisis detallado de los cambios recientes en las Normas Internacionales de Información Financiera y cómo afectarán los reportes del último trimestre corporativo.
+                    Conoce qué son las cuentas por cobrar, sus características como activo circulante y por qué algunas deudas se terminan convirtiendo en cuentas incobrables por quiebra o falta de pago.
                   </p>
                   <div class="mt-auto">
-                    <a href="#" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue transition-colors group-hover:translate-x-1 transform duration-300">
-                      Leer completo <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <a href="cuentas-por-cobrar.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue transition-colors group-hover:translate-x-1 transform duration-300">
+                      Leer artículo completo <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
                   </div>
                 </div>
@@ -142,185 +148,233 @@
               <!-- Article Card 2 -->
               <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
                 <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto border-r border-gray-100 flex items-center justify-center bg-gray-50">
-                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gráficos financieros" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Provisión incobrables" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                   <div class="absolute top-4 left-4">
-                    <span class="bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Impuestos</span>
+                    <span class="click-badge cursor-pointer hover:bg-brand-blue hover:text-white transition-colors bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Estados Financieros</span>
                   </div>
                 </div>
                 <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
-                  <div class="flex items-center text-sm text-gray-500 mb-3 gap-4">
-                    <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> 18 Oct, 2026</span>
-                  </div>
                   <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
-                    <a href="#">Deducciones fiscales clave para PYMES este año</a>
+                    <a href="provision-incobrables.html">2. La Provisión para Cuentas Incobrables y su Impacto Contable</a>
                   </h3>
                   <p class="text-gray-600 mb-4 line-clamp-3">
-                    Descubre cuáles son los gastos deducibles más ignorados por las pequeñas y medianas empresas que podrían ahorrarte miles en tu próxima declaración.
+                    Aprende cómo registrar las estimaciones para anticipar pérdidas, su impacto en el Estado de Resultados y el Balance General, y la gran importancia de esta planificación.
                   </p>
                   <div class="mt-auto">
-                    <a href="#" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue transition-colors group-hover:translate-x-1 transform duration-300">
-                      Leer completo <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <a href="provision-incobrables.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue transition-colors group-hover:translate-x-1 transform duration-300">
+                      Leer artículo completo <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Article Card 3 -->
+              <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
+                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto border-r border-gray-100 flex items-center justify-center bg-gray-50">
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Métodos de estimación" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute top-4 left-4">
+                    <span class="click-badge cursor-pointer hover:bg-brand-blue hover:text-white transition-colors bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Metodología</span>
+                  </div>
+                </div>
+                <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
+                    <a href="metodos-estimacion.html">3. Métodos de Estimación: Porcentajes y Antigüedad de Saldos</a>
+                  </h3>
+                  <p class="text-gray-600 mb-4 line-clamp-3">
+                    Descubre cómo calcular con precisión el riesgo financiero a través del Método de Porcentaje sobre Ventas y el Método de Antigüedad de Saldos, con ejemplos detallados de cada uno.
+                  </p>
+                  <div class="mt-auto">
+                    <a href="metodos-estimacion.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue transition-colors group-hover:translate-x-1 transform duration-300">
+                      Leer artículo completo <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Article Card 4 -->
+              <article class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col md:flex-row">
+                <div class="md:w-2/5 relative overflow-hidden h-60 md:h-auto border-r border-gray-100 flex items-center justify-center bg-gray-50">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Calculadoras y herramientas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute top-4 left-4">
+                    <span class="click-badge cursor-pointer hover:bg-brand-blue hover:text-white transition-colors bg-white/90 backdrop-blur-sm text-brand-blue px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Herramientas</span>
+                  </div>
+                </div>
+                <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                  <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-blue transition-colors">
+                    <a href="herramientas-calculadoras.html">4. Calculadora de Estimación y Calculadora de ISR 2026</a>
+                  </h3>
+                  <p class="text-gray-600 mb-4 line-clamp-3">
+                    Utiliza nuestras herramientas interactivas automatizadas para determinar ágilmente las provisiones necesarias y calcular el Impuesto Sobre la Renta (ISR) para Personas Físicas y Morales.
+                  </p>
+                  <div class="mt-auto">
+                    <a href="herramientas-calculadoras.html" class="text-brand-gold-dark font-semibold inline-flex items-center hover:text-brand-blue transition-colors group-hover:translate-x-1 transform duration-300">
+                      Entrar a Calculadoras <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </a>
                   </div>
                 </div>
               </article>
             </div>
-
-            <!-- Pagination -->
-            <div class="mt-12 flex justify-center items-center gap-2">
-              <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-50 hover:text-brand-blue disabled:opacity-50 cursor-not-allowed" disabled>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-              </button>
-              <button class="w-10 h-10 rounded-full bg-brand-blue text-white flex items-center justify-center font-medium shadow-md cursor-pointer hover:bg-brand-blue-light transition-colors">1</button>
-              <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-50 font-medium cursor-pointer transition-colors">2</button>
-              <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-50 font-medium cursor-pointer transition-colors">3</button>
-              <span class="text-gray-400">...</span>
-              <button class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-gray-50 hover:text-brand-blue cursor-pointer transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-              </button>
+            
+            <div class="mt-12 text-center">
+               <p class="text-sm text-gray-400 italic">Mostrando 4 de 5 artículos de la serie "Provisiones y Finanzas"</p>
             </div>
           </div>
 
-          <!-- Sidebar -->
-          <aside class="w-full lg:w-1/3 space-y-8">
-            <!-- Search Widget -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-              <h3 class="font-bold text-gray-900 mb-4 text-lg">Buscar</h3>
-              <div class="relative">
-                <input type="text" placeholder="Término contable..." class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-colors bg-gray-50 focus:bg-white text-gray-700">
-                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-              </div>
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-1/3 space-y-8" id="sidebar-widgets">
+          <!-- Search Widget -->
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="font-bold text-gray-900 mb-4 text-lg">Buscar Artículos</h3>
+            <div class="relative">
+              <input type="text" id="searchInput" placeholder="Ej. Provisión, Incobrables..."
+                class="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue transition-colors bg-gray-50 focus:bg-white text-gray-700">
+              <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3.5" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
             </div>
+            <p id="search-feedback" class="text-xs text-brand-gold-dark mt-2 hidden">0 resultados encontrados.</p>
+          </div>
 
-            <!-- Categories Widget -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-              <h3 class="font-bold text-gray-900 mb-4 text-lg border-b border-gray-100 pb-2">Categorías</h3>
-              <ul class="space-y-3">
-                <li>
-                  <a href="#" class="flex justify-between items-center text-gray-600 hover:text-brand-blue group transition-colors">
-                    <span class="flex items-center gap-2">
-                       <span class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
-                       Normas NIIF
-                    </span>
-                    <span class="bg-gray-100 text-xs px-2 py-1 rounded-full text-gray-500 group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors">12</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex justify-between items-center text-gray-600 hover:text-brand-blue group transition-colors">
-                    <span class="flex items-center gap-2">
-                       <span class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
-                       Auditoría
-                    </span>
-                    <span class="bg-gray-100 text-xs px-2 py-1 rounded-full text-gray-500 group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors">8</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex justify-between items-center text-gray-600 hover:text-brand-blue group transition-colors">
-                    <span class="flex items-center gap-2">
-                       <span class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
-                       Impuestos
-                    </span>
-                    <span class="bg-gray-100 text-xs px-2 py-1 rounded-full text-gray-500 group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors">24</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="flex justify-between items-center text-gray-600 hover:text-brand-blue group transition-colors">
-                    <span class="flex items-center gap-2">
-                       <span class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
-                       Finanzas Corporativas
-                    </span>
-                    <span class="bg-gray-100 text-xs px-2 py-1 rounded-full text-gray-500 group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors">15</span>
-                  </a>
-                </li>
-              </ul>
+          <!-- Categories Widget -->
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-center mb-4 border-b border-gray-100 pb-2">
+              <h3 class="font-bold text-gray-900 text-lg">Filtrar por Tema</h3>
+              <button id="btn-reset-filters" class="text-xs text-brand-blue hover:underline hidden">Ver todos</button>
             </div>
-
-            <!-- Newsletter Widget -->
-            <div class="bg-gradient-to-br from-brand-blue to-accent-dark p-8 rounded-2xl shadow-xl text-white relative overflow-hidden" id="boletin">
-              <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-white/10 blur-2xl"></div>
-              <h3 class="font-playfair font-bold text-2xl mb-2 relative z-10">Boletín Financiero</h3>
-              <p class="text-blue-100 text-sm mb-6 relative z-10">Recibe las últimas actualizaciones tributarias y consejos contables directamente en tu correo.</p>
-              <form class="relative z-10 space-y-3" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
-                <input type="email" placeholder="Tu correo electrónico" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:bg-white/20 transition-all">
-                <button type="submit" class="w-full px-4 py-3 rounded-xl bg-brand-gold text-brand-blue font-bold hover:bg-white transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 cursor-pointer">
-                  Suscribirme
+            <ul class="space-y-3" id="categoryList">
+              <li>
+                <button data-cat="Conceptos Generales"
+                  class="w-full flex justify-between items-center text-gray-600 hover:text-brand-blue group transition-colors cursor-pointer text-left">
+                  <span class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                    Conceptos Generales
+                  </span>
+                  <span class="bg-gray-100 text-xs px-2 py-1 rounded-full text-gray-500 group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors">1</span>
                 </button>
-              </form>
+              </li>
+              <li>
+                <button data-cat="Estados Financieros"
+                  class="w-full flex justify-between items-center text-gray-600 hover:text-brand-blue group transition-colors cursor-pointer text-left">
+                  <span class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                    Estados Financieros
+                  </span>
+                  <span class="bg-gray-100 text-xs px-2 py-1 rounded-full text-gray-500 group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors">1</span>
+                </button>
+              </li>
+              <li>
+                <button data-cat="Metodología"
+                  class="w-full flex justify-between items-center text-gray-600 hover:text-brand-blue group transition-colors cursor-pointer text-left">
+                  <span class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                    Metodología
+                  </span>
+                  <span class="bg-gray-100 text-xs px-2 py-1 rounded-full text-gray-500 group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors">1</span>
+                </button>
+              </li>
+              <li>
+                <button data-cat="Herramientas"
+                  class="w-full flex justify-between items-center text-gray-600 hover:text-brand-blue group transition-colors cursor-pointer text-left">
+                  <span class="flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold group-hover:scale-150 transition-transform"></span>
+                    Herramientas Interactivas
+                  </span>
+                  <span class="bg-gray-100 text-xs px-2 py-1 rounded-full text-gray-500 group-hover:bg-brand-blue/10 group-hover:text-brand-blue transition-colors">1</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <!-- Brand Info -->
+          <div>
+            <div class="flex items-center gap-2 mb-6 cursor-pointer group">
+              <img src="/blog-contabilidad/assets/logo-prisma-D8ZPfh8l.png" alt="Logo Prisma Contable" class="w-10 h-10 object-contain">
+              <span class="font-playfair text-2xl font-bold text-white tracking-tight">Prisma Contable</span>
             </div>
-          </aside>
-
-        </div>
-      </main>
-
-      <!-- Footer -->
-      <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            <!-- Brand Info -->
-            <div>
-              <div class="flex items-center gap-2 mb-6 cursor-pointer group">
-                <div class="w-8 h-8 flex items-center justify-center text-white font-bold text-lg border border-brand-gold rounded group-hover:bg-brand-gold group-hover:text-brand-blue transition-colors duration-300">
-                  CB
-                </div>
-                <span class="font-playfair text-2xl font-bold text-white tracking-tight">ContaBlog</span>
-              </div>
-              <p class="text-sm text-gray-400 mb-6">
-                Brindando excelencia informativa en el complejo mundo de la contabilidad, las finanzas y los impuestos para profesionales del mañana.
-              </p>
-              <div class="flex gap-4">
-                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">
-                  <span class="sr-only">Twitter</span>
-                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
-                </a>
-                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">
-                  <span class="sr-only">LinkedIn</span>
-                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Links -->
-            <div>
-              <h4 class="text-white font-bold mb-4">Enlaces Útiles</h4>
-              <ul class="space-y-2 text-sm">
-                <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Sobre Nosotros</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Buscador NIIF</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Consultoría</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Cursos de Actualización</a></li>
-              </ul>
-            </div>
-
-            <!-- Legal -->
-            <div>
-              <h4 class="text-white font-bold mb-4">Legal</h4>
-              <ul class="space-y-2 text-sm">
-                <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Términos y Condiciones</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Política de Privacidad</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">Política de Cookies</a></li>
-              </ul>
-            </div>
-
-            <!-- Contact -->
-            <div>
-              <h4 class="text-white font-bold mb-4">Contacto</h4>
-              <ul class="space-y-3 text-sm">
-                <li class="flex items-start gap-3">
-                  <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                  <span class="text-gray-400">contacto@contablog.edu</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                  <span class="text-gray-400">Ciudad Universitaria, Módulo 4</span>
-                </li>
-              </ul>
+            <p class="text-sm text-gray-400 mb-6">
+              Brindando excelencia informativa en el complejo mundo de la contabilidad, las finanzas y los impuestos
+              para profesionales del mañana.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">
+                <span class="sr-only">Twitter</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">
+                <span class="sr-only">LinkedIn</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-            <p>&copy; 2026 ContaBlog. Todos los derechos reservados para fines académicos.</p>
-            <p class="mt-2 md:mt-0">Proyecto Escolar UX/UI</p>
+
+          <!-- Links -->
+          <div>
+            <h4 class="text-white font-bold mb-4">Enlaces Útiles</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-brand-gold transition-colors">Sobre Nosotros</a></li>
+              <li><a href="articulos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Artículos</a></li>
+              <li><a href="herramientas-calculadoras.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calculadoras</a></li>
+              <li><a href="calculadora-isr.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calcular ISR</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h4 class="text-white font-bold mb-4">Legal</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="terminos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Términos y Condiciones</a></li>
+              <li><a href="privacidad.html" class="text-gray-400 hover:text-brand-gold transition-colors">Política de Privacidad</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="text-white font-bold mb-4">Contacto</h4>
+            <ul class="space-y-3 text-sm">
+              <li class="flex items-start gap-3">
+                <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span class="text-gray-400">contacto@Prisma Contable.edu</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="text-gray-400">Ciudad Universitaria, Módulo 4</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-    </div>
-  </body>
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+          <p>&copy; 2026 Prisma Contable. Todos los derechos reservados para fines académicos.</p>
+          <p class="mt-2 md:mt-0">Proyecto Escolar UX/UI</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>

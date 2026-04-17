@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Herramientas y Calculadoras - ContaBlog</title>
+    <title>Calculadora de Estimación y Estadística - Prisma Contable</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
   </head>
@@ -12,13 +12,14 @@
       <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-20">
-            <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-              <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">CB</div>
-              <span class="font-playfair text-2xl font-bold text-brand-blue">ContaBlog</span>
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+              <img src="src/assets/logo-prisma.png" alt="Logo Prisma Contable" class="w-14 h-14 object-contain">
+              <span class="font-playfair text-2xl font-bold text-brand-blue">Prisma Contable</span>
             </a>
             <nav class="hidden md:flex space-x-8">
               <a href="index.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 hover:border-brand-gold transition-all">Inicio</a>
               <a href="articulos.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 hover:border-brand-gold transition-all">Artículos</a>
+              <a href="calculadora-isr.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 hover:border-brand-gold transition-all">Calc. ISR</a>
             </nav>
           </div>
         </div>
@@ -26,182 +27,147 @@
 
       <section class="pt-32 pb-12 bg-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
-          <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold-dark font-semibold text-sm mb-6">Herramientas Digitales</span>
-          <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">4. Calculadora de Provisión e ISR</h1>
-          <p class="text-xl text-gray-600">Herramientas interactivas basadas en la estructura de cálculo contable fiscal 2026.</p>
+          <span class="inline-block py-1 px-3 rounded-full bg-brand-blue/10 text-brand-blue font-semibold text-sm mb-6 uppercase tracking-wider">Herramienta Principal</span>
+          <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">Porcentaje Presupuestado e Incobrables</h1>
+          <p class="text-xl text-gray-600">Herramienta técnica para la determinación de provisiones basada en la <strong>Relación Estadística</strong> histórica.</p>
         </div>
       </section>
 
       <main class="max-w-6xl mx-auto px-4 pb-20">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
-          <!-- Provision Tool -->
-          <div class="relative bg-white p-8 rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-brand-blue/10 flex flex-col overflow-hidden group">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/5 rounded-full -mr-20 -mt-20 blur-3xl transition-transform group-hover:scale-110 duration-700"></div>
-            
-            <div class="mb-8 relative z-10">
-              <div class="w-14 h-14 bg-brand-blue/10 rounded-2xl flex items-center justify-center mb-6">
-                <svg class="w-7 h-7 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-              </div>
-              <h2 class="text-3xl font-bold text-gray-900 mb-3 tracking-tight">Provisión</h2>
-              <p class="text-gray-500 font-medium">
-                Método de % sobre ventas para estimación de cuentas incobrables.
-              </p>
-            </div>
-            
-            <div class="space-y-6 flex-grow relative z-10">
-              <div class="relative">
-                <label class="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Ventas a crédito ($)</label>
-                <div class="relative">
-                  <span class="absolute left-4 top-3.5 text-gray-400 font-bold">$</span>
-                  <input type="number" id="calc-ventas" class="w-full pl-8 pr-5 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue transition-all bg-gray-50 focus:bg-white text-lg font-medium" placeholder="Ej. 300000">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+          
+          <!-- Statistical Input Column -->
+          <div class="lg:col-span-1 space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                Análisis Histórico (3 años)
+              </h3>
+              <p class="text-xs text-gray-500 mb-6 leading-relaxed">Ingresa los datos de los últimos periodos para justificar estadísticamente el porcentaje.</p>
+              
+              <div class="space-y-4">
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                  <label class="block text-[10px] font-bold text-gray-400 uppercase mb-2">Periodo 2023</label>
+                  <div class="grid grid-cols-2 gap-3">
+                    <input type="number" id="h-v-2023" class="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" placeholder="Ventas 2023">
+                    <input type="number" id="h-i-2023" class="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" placeholder="Perdidas 2023">
+                  </div>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                  <label class="block text-[10px] font-bold text-gray-400 uppercase mb-2">Periodo 2024</label>
+                  <div class="grid grid-cols-2 gap-3">
+                    <input type="number" id="h-v-2024" class="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" placeholder="Ventas 2024">
+                    <input type="number" id="h-i-2024" class="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" placeholder="Perdidas 2024">
+                  </div>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                  <label class="block text-[10px] font-bold text-gray-400 uppercase mb-2">Periodo 2025 (Estimado)</label>
+                  <div class="grid grid-cols-2 gap-3">
+                    <input type="number" id="h-v-2025" class="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" placeholder="Ventas 2025">
+                    <input type="number" id="h-i-2025" class="w-full px-3 py-2 rounded-lg border border-gray-200 text-sm" placeholder="Perdidas 2025">
+                  </div>
                 </div>
               </div>
-              <div class="relative">
-                <label class="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Porcentaje estimado (%)</label>
-                <div class="relative">
-                  <span class="absolute left-4 top-3.5 text-gray-400 font-bold">%</span>
-                  <input type="number" id="calc-porc" step="0.1" class="w-full pl-10 pr-5 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue transition-all bg-gray-50 focus:bg-white text-lg font-medium" placeholder="Ej. 4">
-                </div>
-              </div>
-            </div>
-            
-            <div id="res-prov" class="mt-10 p-8 bg-gradient-to-br from-gray-900 to-brand-blue rounded-2xl text-center relative z-10 shadow-2xl overflow-hidden border border-white/10">
-              <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-              <span class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest relative z-10 flex items-center justify-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Gasto Estimado Calculado
-              </span>
-              <span class="block font-playfair text-5xl font-bold text-brand-gold drop-shadow-lg relative z-10 transition-all duration-300" id="txt-prov-val">$0.00</span>
+              
+              <button id="btn-calc-stat" class="w-full mt-6 py-3 bg-brand-blue text-white rounded-xl font-bold text-sm hover:bg-brand-blue/90 transition-all shadow-md active:scale-95">
+                Calcular Promedio Estadístico
+              </button>
             </div>
           </div>
 
-          <!-- ISR Tool -->
-          <div class="relative bg-white p-8 rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-brand-gold/20 flex flex-col overflow-hidden group">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full -mr-20 -mt-20 blur-3xl transition-transform group-hover:scale-110 duration-700"></div>
-            
-            <div class="mb-8 relative z-10">
-              <div class="w-14 h-14 bg-brand-gold/20 rounded-2xl flex items-center justify-center mb-6">
-                <svg class="w-7 h-7 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-              </div>
-              <h2 class="text-3xl font-bold text-gray-900 mb-3 tracking-tight">Cálculo de ISR</h2>
-              <p class="text-gray-500 font-medium">Módulo simplificado del Impuesto Sobre la Renta 2026 en tiempo real.</p>
-            </div>
-            
-            <div class="space-y-6 flex-grow relative z-10">
-              <div>
-                <label class="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Régimen Fiscal</label>
-                <select id="calc-regimen" class="w-full px-5 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-all bg-gray-50 focus:bg-white text-lg font-medium cursor-pointer appearance-none">
-                  <option value="moral">Persona Moral (30%)</option>
-                  <option value="fisica">Persona Física (Tabla Progresiva)</option>
-                </select>
-              </div>
-              <div class="relative">
-                <label class="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide text-xs">Ingreso Base Gravable ($)</label>
-                <div class="relative">
-                  <span class="absolute left-4 top-3.5 text-gray-400 font-bold">$</span>
-                  <input type="number" id="calc-ingreso" class="w-full pl-8 pr-5 py-4 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-gold/50 focus:border-brand-gold transition-all bg-gray-50 focus:bg-white text-lg font-medium" placeholder="Ej. 25000">
-                </div>
-              </div>
+          <!-- Main Calculator Column -->
+          <div class="lg:col-span-2 space-y-8">
+            <div class="bg-white p-8 rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.08)] border border-brand-blue/10 relative overflow-hidden">
+               <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+               
+               <div class="relative z-10 flex flex-col md:flex-row md:items-end gap-6 mb-10">
+                  <div class="flex-grow">
+                    <label class="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">Ventas a crédito proyectadas ($)</label>
+                    <div class="relative">
+                      <span class="absolute left-5 top-4 text-gray-400 font-bold">$</span>
+                      <input type="number" id="calc-ventas" class="w-full pl-10 pr-6 py-5 rounded-2xl border border-gray-200 focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue transition-all bg-gray-50 focus:bg-white text-2xl font-bold" placeholder="Ej. 1,500,000">
+                    </div>
+                  </div>
+                  <div class="w-full md:w-48">
+                    <label class="block text-sm font-bold text-gray-700 mb-2 uppercase tracking-wide">% Presupuestado</label>
+                    <div class="relative">
+                      <span class="absolute left-5 top-4 text-gray-400 font-bold text-xl">%</span>
+                      <input type="number" id="calc-porc" step="0.01" class="w-full pl-10 pr-6 py-5 rounded-2xl border border-gray-200 focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue transition-all bg-brand-blue/5 focus:bg-white text-2xl font-bold text-brand-blue" placeholder="4.5">
+                    </div>
+                  </div>
+               </div>
+
+               <div id="res-prov" class="p-10 bg-gray-900 rounded-3xl text-center shadow-2xl relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/20 to-transparent"></div>
+                  <span class="block text-xs font-bold text-gray-400 mb-3 uppercase tracking-[0.3em] relative z-10">Provisión a Registrar (GAP)</span>
+                  <span class="block font-playfair text-6xl font-bold text-brand-gold drop-shadow-lg relative z-10" id="txt-prov-val">$0.00</span>
+               </div>
+
+               <!-- Statistical Justification Label -->
+               <div id="stat-justification" class="mt-8 p-6 bg-brand-gold/5 rounded-2xl border border-brand-gold/10 hidden animate-fade-in">
+                  <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 text-sm mb-1 uppercase tracking-tight">Relación Estadística Justificada</h4>
+                      <p class="text-sm text-gray-600 leading-relaxed" id="stat-text">Este porcentaje se basa en el promedio de los últimos 3 años, correlacionando un histórico de pérdidas reales detectadas vs el nivel de facturación.</p>
+                    </div>
+                  </div>
+               </div>
             </div>
 
-            <div id="res-isr" class="mt-10 p-8 bg-gradient-to-br from-[#0c233c] to-[#040f1a] rounded-2xl text-center relative z-10 shadow-2xl overflow-hidden border border-white/5">
-              <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-              <span class="block text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest relative z-10 flex items-center justify-center gap-2">
-                 <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span> ISR Determinado
-              </span>
-              <span class="block font-playfair text-5xl font-bold text-white mb-3 drop-shadow-md relative z-10 transition-all duration-300" id="txt-isr-val">$0.00</span>
-              <span class="inline-block text-xs font-mono text-brand-blue bg-blue-50/90 px-3 py-1.5 rounded-md relative z-10 empty:hidden" id="txt-isr-detail"></span>
+            <!-- Theory Section -->
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <span class="w-1 h-6 bg-brand-gold rounded-full"></span>
+                  ¿Qué es el Porcentaje Presupuestado?
+                </h3>
+                <div class="prose prose-sm text-gray-600 max-w-none">
+                  <p>Es la técnica contable que permite estimar el gasto de incobrabilidad de un periodo antes de que ocurra la pérdida real. Se basa en el supuesto estadístico de que el comportamiento pasado es el mejor predictor del futuro.</p>
+                  <p><strong>Bajo NIIF 9:</strong> Se conoce como el modelo de pérdida esperada. Requiere que la empresa justifique que el % elegido no es arbitrario, sino que existe una <em>Relación Estadística</em> clara entre sus ventas y su historial de cobro.</p>
+                </div>
             </div>
           </div>
         </div>
       </main>
-        <!-- Footer -->
-        <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-              <!-- Brand Info -->
-              <div>
-                <div class="flex items-center gap-2 mb-6 cursor-pointer group">
-                  <div
-                    class="w-8 h-8 flex items-center justify-center text-white font-bold text-lg border border-brand-gold rounded group-hover:bg-brand-gold group-hover:text-brand-blue transition-colors duration-300">
-                    CB
-                  </div>
-                  <span class="font-playfair text-2xl font-bold text-white tracking-tight">ContaBlog</span>
-                </div>
-                <p class="text-sm text-gray-400 mb-6">
-                  Brindando excelencia informativa en el complejo mundo de la contabilidad, las finanzas y los impuestos
-                  para profesionales del mañana.
-                </p>
-                <div class="flex gap-4">
-                  <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">
-                    <span class="sr-only">Twitter</span>
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path
-                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                  </a>
-                  <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors">
-                    <span class="sr-only">LinkedIn</span>
-                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fill-rule="evenodd"
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                        clip-rule="evenodd" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
 
-              <!-- Links -->
-              <div>
-                <h4 class="text-white font-bold mb-4">Enlaces Útiles</h4>
-                <ul class="space-y-2 text-sm">
-                  <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-brand-gold transition-colors">Sobre Nosotros</a></li>
-                  <li><a href="articulos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Artículos</a></li>
-                  <li><a href="herramientas-calculadoras.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calculadoras</a></li>
-                </ul>
+      <!-- Footer -->
+      <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div>
+              <div class="flex items-center gap-2 mb-6 cursor-pointer group">
+                <img src="src/assets/logo-prisma.png" alt="Logo Prisma Contable" class="w-10 h-10 object-contain">
+                <span class="font-playfair text-2xl font-bold text-white tracking-tight">Prisma Contable</span>
               </div>
-
-              <!-- Legal -->
-              <div>
-                <h4 class="text-white font-bold mb-4">Legal</h4>
-                <ul class="space-y-2 text-sm">
-                  <li><a href="terminos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Términos y Condiciones</a></li>
-                  <li><a href="privacidad.html" class="text-gray-400 hover:text-brand-gold transition-colors">Política de Privacidad</a></li>
-                </ul>
-              </div>
-
-              <!-- Contact -->
-              <div>
-                <h4 class="text-white font-bold mb-4">Contacto</h4>
-                <ul class="space-y-3 text-sm">
-                  <li class="flex items-start gap-3">
-                    <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <span class="text-gray-400">contacto@contablog.edu</span>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span class="text-gray-400">Ciudad Universitaria, Módulo 4</span>
-                  </li>
-                </ul>
-              </div>
+              <p class="text-sm text-gray-400">Excelencia informativa en contabilidad y finanzas profesionales.</p>
             </div>
-            <div
-              class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-              <p>&copy; 2026 ContaBlog. Todos los derechos reservados para fines académicos.</p>
-              <p class="mt-2 md:mt-0">Proyecto Escolar UX/UI - UJAT</p>
+            <div>
+              <h4 class="text-white font-bold mb-4">Secciones</h4>
+              <ul class="space-y-2 text-sm text-gray-400">
+                <li><a href="articulos.html" class="hover:text-brand-gold transition-colors">Artículos Docentes</a></li>
+                <li><a href="calculadora-isr.html" class="hover:text-brand-gold transition-colors">Calculadora ISR</a></li>
+                <li><a href="index.html" class="hover:text-brand-gold transition-colors">Inicio</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Soporte Académico</h4>
+              <p class="text-sm text-gray-400 leading-relaxed">Proyecto enfocado en la enseñanza de las NIIF y normativa contable actualizada.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Contacto</h4>
+              <p class="text-sm text-gray-400">contacto@Prisma Contable.edu</p>
             </div>
           </div>
-        </footer>
+          <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <p>&copy; 2026 Prisma Contable - UJAT.</p>
+          </div>
+        </div>
+      </footer>
     </div>
 
-    <!-- The same pure JS calculator script we made earlier will be reused here -->
+    <!-- Script logic -->
     <script type="module" src="src/calculadoras.js"></script>
   </body>
 </html>

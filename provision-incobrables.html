@@ -1,83 +1,141 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Provisión e Impacto Contable - ContaBlog</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
-  </head>
-  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
-    <div id="app">
-      <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-20">
-            <a href="index.html" class="flex-shrink-0 flex items-center gap-2">
-              <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">CB</div>
-              <span class="font-playfair text-2xl font-bold text-brand-blue">ContaBlog</span>
-            </a>
-            <nav class="hidden md:flex space-x-8">
-              <a href="index.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Inicio</a>
-              <a href="articulos.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 text-brand-blue font-bold">Artículos</a>
-            </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provisión e Impacto Contable - Prisma Contable</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <div id="app">
+    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+            <img src="src/assets/logo-prisma.png" alt="Logo Prisma Contable" class="w-14 h-14 object-contain">
+            <span class="font-playfair text-2xl font-bold text-brand-blue tracking-tight">Prisma Contable</span>
+          </a>
+
+          <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Inicio</a>
+            <a href="articulos.html" class="text-gray-600 hover:text-brand-blue font-medium py-2 text-brand-blue font-bold">Artículos</a>
+            <a href="herramientas-calculadoras.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Calc. Estimación</a>
+            <a href="calculadora-isr.html" class="text-gray-600 hover:text-brand-blue font-medium py-2">Calc. ISR</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="pt-32 pb-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <span
+          class="inline-block py-1 px-3 rounded-full bg-brand-blue/10 text-brand-blue font-semibold text-sm mb-6">Estados
+          Financieros</span>
+        <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">2. La Provisión para Cuentas
+          Incobrables y su Impacto Contable</h1>
+      </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-4 pb-16">
+      <article class="prose prose-lg max-w-none text-gray-700">
+        <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">4. La Provisión: Basada en NIIF 9 y la Pérdida Esperada
+        </h2>
+        <p>Históricamente, la contabilidad utilizaba un modelo de "pérdida incurrida" (esperar a que el cliente fallara
+          para registrar el impacto). Sin embargo, tras recientes crisis financieras mundiales, estándares como la
+          <strong>NIIF 9</strong> revolucionan esto introduciendo el <strong>Modelo de Pérdida Crediticia Esperada
+            (PCE)</strong>.</p>
+        <p>La provisión para cuentas incobrables (oficialmente denominada <em>Estimación por pérdidas crediticias
+            esperadas</em>) es un requerimiento normativo donde las empresas registran, desde el día uno del crédito, el
+          riesgo de pérdida técnica en función a un pronóstico sustentable.</p>
+        <p>Esta cuenta especial (una cuenta complementaria o de "contra-activo"):</p>
+        <ul class="list-disc pl-5 mb-4">
+          <li>Nace con saldo acreedor en el balance.</li>
+          <li>Reduce directamente el valor bruto de la cuenta de Clientes para revelar el <strong>valor neto de
+              realización</strong> (lo que realmente se espera cobrar).</li>
+        </ul>
+
+        <div class="bg-brand-blue/10 p-5 border-l-4 border-brand-blue rounded-r-lg my-6">
+          <p class="font-semibold mb-2 text-brand-blue">Doble Asiento Inicial</p>
+          <p class="text-sm">Al reconocer que la factura de un cliente de $100,000 USD cuenta con alta probabilidad
+            técnica de insolvencia (ej. $5,000 USD de riesgo), contablemente se genera un CARGO a "Gastos de Operación
+            por Cuentas Incobrables" y un ABONO a la cuenta complementaria de Activo "Estimación para Cuentas
+            Incobrables". De esta forma, el derecho patrimonial baja a $95,000 USD netos en los libros sin necesidad de
+            cancelar bruscamente la cuenta del cliente individualizado.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">5. El Impacto Contable y el Principio de Asociación
+        </h2>
+        <p>Crear esta estimación obedece a uno de los postulados contables más sagrados: el <strong>Principio de
+            Asociación de Costos y Gastos con Ingresos</strong>. La pérdida provocada por la falta de cobro debe
+          registrarse en el mismo año en que se originó la venta, evitando distorsionar o sobrevalorar futuros periodos
+          fiscales.</p>
+
+        <h3 class="text-xl font-bold mt-6 text-gray-800 border-b pb-2">Afectación en el Estado de Resultados Integral
+        </h3>
+        <p class="mt-2 text-brand-gold-dark font-medium">Gasto sin salida de efectivo (Non-Cash Expense)</p>
+        <p>Se asume el golpe financiero en el periodo actual "Gasto por incobrabilidad", golpeando drásticamente la
+          utilidad neta antes de impuestos, pero no afecta la caja real porque jamás fue un dinero cobrado. En
+          legislaciones fiscales mexicanas, este gasto puede llegar a ser deducible de impuestos (ISR) si se demuestran
+          gestiones notariales y agote de cobro efectivo.</p>
+
+        <h3 class="text-xl font-bold mt-6 text-gray-800 border-b pb-2">Afectación en el Estado de Situación Financiera
+          (Balance)</h3>
+        <div class="bg-gray-100 p-5 rounded-lg my-4 font-mono text-sm border border-gray-200">
+          <p class="text-gray-500">// Extracto de Activo Circulante</p>
+          <p>Clientes (Facturas vigentes y morosas): $800,000</p>
+          <p class="text-red-500">(-) Estimación de Pérdidas Crediticias Esperadas: ($40,000)</p>
+          <p class="font-bold border-t border-gray-300 pt-2 mt-2">Cuentas por Cobrar Netas: $760,000</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">6. La Verdadera Importancia de la Estimación</h2>
+        <p>Más allá del cumplimiento regulatorio de la NIIF, las empresas que miden el deterioro crediticio de su
+          cartera logran:</p>
+        <ul class="list-disc pl-5 my-4 space-y-2">
+          <li>Prevenir que existan "dividendos ficticios" (repartir utilidades a los dueños sobre dinero que jamás
+            entrará al banco).</li>
+          <li>Optimizar sus políticas pre-aprobatorias de crédito mitigando el riesgo al instante.</li>
+          <li>Sincerar los balances ante auditorías externas o financiamientos bancarios, mostrando gran ética y madurez
+            financiera corporativa.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">7. Justificación de la Relación Estadística</h2>
+        <p>La contabilidad moderna no permite que las estimaciones sean producto de la intuición o de "datos al aire". El profesorado y la normativa técnica (NIIF 9) exigen una <strong>Relación Estadística</strong> que justifique el porcentaje elegido.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+          <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md">
+            <h4 class="font-bold text-gray-900 border-b pb-2 mb-4 flex items-center gap-2">
+               <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path></svg>
+               Análisis de Frecuencias
+            </h4>
+            <p class="text-sm">Se basa en la observación de cuántos clientes han fallado en sus pagos en los últimos 3 a 5 ejercicios fiscales. Esta frecuencia histórica permite establecer una <strong>probabilidad de ocurrencia</strong> que es la base del porcentaje presupuestado.</p>
+          </div>
+          <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md">
+            <h4 class="font-bold text-gray-900 border-b pb-2 mb-4 flex items-center gap-2">
+               <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+               Correlación con el Ingreso
+            </h4>
+            <p class="text-sm">La estadística demuestra que existe una correlación directa entre el aumento del volumen de ventas a crédito y el aumento del riesgo nominal. Sin un análisis estadístico, la empresa corre el riesgo de subestimar sus pasivos o sobrevalorar sus activos en el balance.</p>
           </div>
         </div>
-      </header>
 
-      <section class="pt-32 pb-12 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-          <span class="inline-block py-1 px-3 rounded-full bg-brand-blue/10 text-brand-blue font-semibold text-sm mb-6">Estados Financieros</span>
-          <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">2. La Provisión para Cuentas Incobrables y su Impacto Contable</h1>
+        <p class="bg-brand-blue/5 p-5 rounded-xl border-l-4 border-brand-gold italic text-sm mb-6">
+          "La relación estadística es el puente que une la realidad operativa de la empresa con la prudencia financiera exigida por los marcos internacionales."
+        </p>
+
+        <div class="mt-12">
+          <a href="index.html" class="inline-flex items-center text-brand-blue font-bold hover:underline">&larr; Volver
+            página de Inicio</a>
         </div>
-      </section>
-
-      <main class="max-w-4xl mx-auto px-4 pb-16">
-        <article class="prose prose-lg max-w-none text-gray-700">
-          <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">4. La Provisión: Basada en NIIF 9 y la Pérdida Esperada</h2>
-          <p>Históricamente, la contabilidad utilizaba un modelo de "pérdida incurrida" (esperar a que el cliente fallara para registrar el impacto). Sin embargo, tras recientes crisis financieras mundiales, estándares como la <strong>NIIF 9</strong> revolucionan esto introduciendo el <strong>Modelo de Pérdida Crediticia Esperada (PCE)</strong>.</p>
-          <p>La provisión para cuentas incobrables (oficialmente denominada <em>Estimación por pérdidas crediticias esperadas</em>) es un requerimiento normativo donde las empresas registran, desde el día uno del crédito, el riesgo de pérdida técnica en función a un pronóstico sustentable.</p>
-          <p>Esta cuenta especial (una cuenta complementaria o de "contra-activo"):</p>
-          <ul class="list-disc pl-5 mb-4">
-             <li>Nace con saldo acreedor en el balance.</li>
-             <li>Reduce directamente el valor bruto de la cuenta de Clientes para revelar el <strong>valor neto de realización</strong> (lo que realmente se espera cobrar).</li>
-          </ul>
-
-          <div class="bg-brand-blue/10 p-5 border-l-4 border-brand-blue rounded-r-lg my-6">
-            <p class="font-semibold mb-2 text-brand-blue">Doble Asiento Inicial</p>
-            <p class="text-sm">Al reconocer que la factura de un cliente de $100,000 USD cuenta con alta probabilidad técnica de insolvencia (ej. $5,000 USD de riesgo), contablemente se genera un CARGO a "Gastos de Operación por Cuentas Incobrables" y un ABONO a la cuenta complementaria de Activo "Estimación para Cuentas Incobrables". De esta forma, el derecho patrimonial baja a $95,000 USD netos en los libros sin necesidad de cancelar bruscamente la cuenta del cliente individualizado.</p>
-          </div>
-
-          <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">5. El Impacto Contable y el Principio de Asociación</h2>
-          <p>Crear esta estimación obedece a uno de los postulados contables más sagrados: el <strong>Principio de Asociación de Costos y Gastos con Ingresos</strong>. La pérdida provocada por la falta de cobro debe registrarse en el mismo año en que se originó la venta, evitando distorsionar o sobrevalorar futuros periodos fiscales.</p>
-          
-          <h3 class="text-xl font-bold mt-6 text-gray-800 border-b pb-2">Afectación en el Estado de Resultados Integral</h3>
-          <p class="mt-2 text-brand-gold-dark font-medium">Gasto sin salida de efectivo (Non-Cash Expense)</p>
-          <p>Se asume el golpe financiero en el periodo actual "Gasto por incobrabilidad", golpeando drásticamente la utilidad neta antes de impuestos, pero no afecta la caja real porque jamás fue un dinero cobrado. En legislaciones fiscales mexicanas, este gasto puede llegar a ser deducible de impuestos (ISR) si se demuestran gestiones notariales y agote de cobro efectivo.</p>
-          
-          <h3 class="text-xl font-bold mt-6 text-gray-800 border-b pb-2">Afectación en el Estado de Situación Financiera (Balance)</h3>
-          <div class="bg-gray-100 p-5 rounded-lg my-4 font-mono text-sm border border-gray-200">
-            <p class="text-gray-500">// Extracto de Activo Circulante</p>
-            <p>Clientes (Facturas vigentes y morosas): $800,000</p>
-            <p class="text-red-500">(-) Estimación de Pérdidas Crediticias Esperadas: ($40,000)</p>
-            <p class="font-bold border-t border-gray-300 pt-2 mt-2">Cuentas por Cobrar Netas: $760,000</p>
-          </div>
-
-          <h2 class="text-2xl font-bold text-brand-blue mt-8 mb-4">6. La Verdadera Importancia de la Estimación</h2>
-          <p>Más allá del cumplimiento regulatorio de la NIIF, las empresas que miden el deterioro crediticio de su cartera logran:</p>
-          <ul class="list-disc pl-5 my-4 space-y-2">
-            <li>Prevenir que existan "dividendos ficticios" (repartir utilidades a los dueños sobre dinero que jamás entrará al banco).</li>
-            <li>Optimizar sus políticas pre-aprobatorias de crédito mitigando el riesgo al instante.</li>
-            <li>Sincerar los balances ante auditorías externas o financiamientos bancarios, mostrando gran ética y madurez financiera corporativa.</li>
-          </ul>
-          
-          <div class="mt-12">
-             <a href="index.html" class="inline-flex items-center text-brand-blue font-bold hover:underline">&larr; Volver al Índice Principal</a>
-          </div>
-        </article>
-      </main>
+      </article>
+    </main>
     <!-- Footer -->
     <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,11 +143,8 @@
           <!-- Brand Info -->
           <div>
             <div class="flex items-center gap-2 mb-6 cursor-pointer group">
-              <div
-                class="w-8 h-8 flex items-center justify-center text-white font-bold text-lg border border-brand-gold rounded group-hover:bg-brand-gold group-hover:text-brand-blue transition-colors duration-300">
-                CB
-              </div>
-              <span class="font-playfair text-2xl font-bold text-white tracking-tight">ContaBlog</span>
+              <img src="src/assets/logo-prisma.png" alt="Logo Prisma Contable" class="w-10 h-10 object-contain">
+              <span class="font-playfair text-2xl font-bold text-white tracking-tight">Prisma Contable</span>
             </div>
             <p class="text-sm text-gray-400 mb-6">
               Brindando excelencia informativa en el complejo mundo de la contabilidad, las finanzas y los impuestos
@@ -118,9 +173,12 @@
           <div>
             <h4 class="text-white font-bold mb-4">Enlaces Útiles</h4>
             <ul class="space-y-2 text-sm">
-              <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-brand-gold transition-colors">Sobre Nosotros</a></li>
-              <li><a href="articulos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Artículos</a></li>
-              <li><a href="herramientas-calculadoras.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calculadoras</a></li>
+              <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-brand-gold transition-colors">Sobre
+                  Nosotros</a></li>
+              <li><a href="articulos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Artículos</a>
+              </li>
+              <li><a href="herramientas-calculadoras.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calc. Estimación</a></li>
+              <li><a href="calculadora-isr.html" class="text-gray-400 hover:text-brand-gold transition-colors">Calculadora ISR</a></li>
             </ul>
           </div>
 
@@ -128,8 +186,10 @@
           <div>
             <h4 class="text-white font-bold mb-4">Legal</h4>
             <ul class="space-y-2 text-sm">
-              <li><a href="terminos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Términos y Condiciones</a></li>
-              <li><a href="privacidad.html" class="text-gray-400 hover:text-brand-gold transition-colors">Política de Privacidad</a></li>
+              <li><a href="terminos.html" class="text-gray-400 hover:text-brand-gold transition-colors">Términos y
+                  Condiciones</a></li>
+              <li><a href="privacidad.html" class="text-gray-400 hover:text-brand-gold transition-colors">Política de
+                  Privacidad</a></li>
             </ul>
           </div>
 
@@ -142,7 +202,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span class="text-gray-400">contacto@contablog.edu</span>
+                <span class="text-gray-400">contacto@Prisma Contable.edu</span>
               </li>
               <li class="flex items-start gap-3">
                 <svg class="h-5 w-5 text-brand-gold mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -158,10 +218,11 @@
         </div>
         <div
           class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>&copy; 2026 ContaBlog. Todos los derechos reservados para fines académicos.</p>
+          <p>&copy; 2026 Prisma Contable. Todos los derechos reservados para fines académicos.</p>
           <p class="mt-2 md:mt-0">Proyecto Escolar UX/UI - UJAT</p>
         </div>
       </div>
     </footer>
-  </body>
+</body>
+
 </html>
