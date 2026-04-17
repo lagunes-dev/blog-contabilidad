@@ -20,6 +20,7 @@ export default defineConfig({
         sobre_nosotros: 'sobre-nosotros.html',
         terminos: 'terminos.html',
         calculadora_isr: 'calculadora-isr.html',
+        guia_usuario: 'guia-usuario.html',
       },
     },
   },
