@@ -21,6 +21,8 @@ export default defineConfig({
         terminos: 'terminos.html',
         calculadora_isr: 'calculadora-isr.html',
         guia_usuario: 'guia-usuario.html',
+        calculadora_depreciacion: 'calculadora-depreciacion.html',
+        conversor_tasas: 'conversor-tasas.html',
       },
     },
   },
