@@ -24,6 +24,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Dropdown Calculadoras toggle
+    const dropdownBtn = document.getElementById('btn-dropdown-calc');
+    const dropdownMenu = document.getElementById('dropdown-menu-calc');
+    const dropdownArrow = document.getElementById('dropdown-arrow');
+
+    if (dropdownBtn && dropdownMenu) {
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = !dropdownMenu.classList.contains('hidden');
+            if (isOpen) {
+                dropdownMenu.classList.add('hidden', 'opacity-0', 'translate-y-1');
+                dropdownMenu.classList.remove('opacity-100', 'translate-y-0');
+                if (dropdownArrow) dropdownArrow.classList.remove('rotate-180');
+            } else {
+                dropdownMenu.classList.remove('hidden');
+                // Small timeout to allow CSS transition
+                requestAnimationFrame(() => {
+                    dropdownMenu.classList.remove('opacity-0', 'translate-y-1');
+                    dropdownMenu.classList.add('opacity-100', 'translate-y-0');
+                });
+                if (dropdownArrow) dropdownArrow.classList.add('rotate-180');
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.add('hidden', 'opacity-0', 'translate-y-1');
+                dropdownMenu.classList.remove('opacity-100', 'translate-y-0');
+                if (dropdownArrow) dropdownArrow.classList.remove('rotate-180');
+            }
+        });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

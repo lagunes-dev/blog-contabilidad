@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIF B-10: Efectos de la Inflación - Prisma Contable</title>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Tasas de Interés - Prisma Contable</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans antialiased">
     <div id="app">
         <!-- Navbar -->
-                <!-- Navbar -->
         <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
@@ -46,7 +45,7 @@
                                         <span class="block text-xs text-gray-500">Activos fijos (NIF C-6)</span>
                                     </div>
                                 </a>
-                                <a href="conversor-tasas.html" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors group">
+                                <a href="conversor-tasas.html" class="flex items-center gap-3 px-4 py-3 bg-gray-50 transition-colors group">
                                     <div class="w-8 h-8 bg-brand-gold/10 rounded-lg flex items-center justify-center group-hover:bg-brand-gold/20 transition-colors">
                                         <svg class="w-4 h-4 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
                                     </div>
@@ -77,62 +76,92 @@
                         <p class="px-3 py-1 text-xs font-bold text-gray-400 uppercase tracking-wider">Otras Herramientas</p>
                         <a href="calculadora-isr.html" class="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Calculadora ISR 2026</a>
                         <a href="calculadora-depreciacion.html" class="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Depreciación Línea Recta</a>
-                        <a href="conversor-tasas.html" class="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Conversor de Tasas</a>
+                        <a href="conversor-tasas.html" class="block px-3 py-2 pl-6 rounded-md text-base font-bold text-brand-blue bg-brand-blue/5">Conversor de Tasas</a>
                     </div>
                     <a href="guia-usuario.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">Guía de Uso</a>
                 </div>
             </div>
         </header>
 
+      <section class="pt-32 pb-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/20 text-brand-gold-dark font-semibold text-sm mb-6">Herramientas Financieras</span>
+          <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">Conversor de Tasas de Interés</h1>
+          <p class="text-xl text-gray-600 mb-6">Equivalencias financieras para análisis de valuación de activos e instrumentos.</p>
+        </div>
+      </section>
 
-        <main class="pt-32 pb-20">
-            <article class="max-w-4xl mx-auto px-4">
-                <span class="inline-block py-1 px-3 rounded-full bg-brand-gold/10 text-brand-gold-dark font-semibold text-sm mb-6 uppercase tracking-wider">Normativa Avanzada</span>
-                <h1 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">5. NIF B-10: Reconocimiento de los Efectos de la Inflación</h1>
-                
-                <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Inflación financiera" class="w-full h-96 object-cover rounded-3xl shadow-lg mb-12">
-
-                <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-                    <p class="text-xl leading-relaxed text-gray-600 italic border-l-4 border-brand-gold pl-6">
-                        "En un entorno inflacionario, la moneda pierde su poder adquisitivo, lo que distorsiona los estados financieros si no se realizan los ajustes pertinentes bajo la NIF B-10."
-                    </p>
-
-                    <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-4">¿Qué es la NIF B-10?</h2>
-                    <p>La Norma de Información Financiera B-10 establece las normas particulares para el reconocimiento de los efectos de la inflación en los estados financieros de las entidades. Su objetivo principal es asegurar que la información sea comparable y refleje la realidad económica del momento.</p>
-
-                    <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-4">Entorno Inflacionario vs. No Inflacionario</h2>
-                    <p>La norma distingue dos escenarios fundamentales basados en la inflación acumulada de los tres ejercicios anuales anteriores:</p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Entorno Inflacionario:</strong> Cuando la inflación acumulada es igual o mayor al 26% (promedio anual del 8%). En este caso, el reconocimiento de los efectos de la inflación es <strong>obligatorio</strong>.</li>
-                        <li><strong>Entorno No Inflacionario:</strong> Cuando la inflación es menor al 26%. En este escenario, no se reconocen los efectos de la inflación, pero se debe mantener la desconexión contable del último periodo inflacionario.</li>
-                    </ul>
-
-                    <div class="my-12 p-8 bg-brand-blue/5 rounded-2xl border border-brand-blue/10">
-                        <h3 class="font-bold text-brand-blue text-xl mb-4 italic">Partidas Monetarias vs. No Monetarias</h3>
-                        <p class="mb-4">Es crucial identificar el tipo de partida para aplicar el tratamiento correcto:</p>
-                        <ul class="space-y-3">
-                            <li><span class="font-bold text-brand-blue">Monetarias:</span> Efectivo, cuentas por cobrar y por pagar. Generan el <strong>REPOMO</strong> (Resultado por Posición Monetaria).</li>
-                            <li><span class="font-bold text-brand-blue">No Monetarias:</span> Inventarios, activos fijos y capital contable. Requieren ser <strong>reexpresadas</strong> mediante el uso de índices (INPC).</li>
-                        </ul>
+      <main class="max-w-3xl mx-auto px-4 pb-20">
+          <!-- Interest Rate Tool -->
+          <div class="relative bg-white p-10 rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-brand-gold/20 flex flex-col overflow-hidden group mt-8">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-brand-gold/10 rounded-full -mr-32 -mt-32 blur-3xl transition-transform group-hover:scale-110 duration-700"></div>
+            
+            <div class="mb-10 relative z-10">
+              <div class="w-16 h-16 bg-brand-gold/20 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+              </div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-4 tracking-tight">Conversión Efectiva</h2>
+              <p class="text-gray-500 font-medium text-lg text-balance">Transforma tasas nominales capitalizables en su equivalente anual efectivo y viceversa.</p>
+            </div>
+            
+            <div class="space-y-6 flex-grow relative z-10">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-widest text-xs">Tipo de Conversión</label>
+                    <select id="calc-tasa-tipo" class="w-full px-6 py-5 rounded-2xl border border-gray-200 focus:ring-4 focus:ring-brand-gold/20 focus:border-brand-gold transition-all bg-gray-50 focus:bg-white text-xl font-medium cursor-pointer appearance-none">
+                      <option value="nom-to-eff">Nominal a Efectiva Anual</option>
+                      <option value="eff-to-nom">Efectiva Anual a Nominal</option>
+                    </select>
+                  </div>
+                  
+                  <div class="relative">
+                    <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-widest text-xs" id="label-tasa-input">Tasa Nominal (%)</label>
+                    <div class="relative">
+                      <span class="absolute right-6 top-5 text-gray-400 font-bold text-xl">%</span>
+                      <input type="number" id="calc-tasa-val" class="w-full pl-6 pr-12 py-5 rounded-2xl border border-gray-200 focus:ring-4 focus:ring-brand-gold/20 focus:border-brand-gold transition-all bg-gray-50 focus:bg-white text-xl font-medium" placeholder="Ej. 12.5" step="0.01">
                     </div>
+                  </div>
+              </div>
 
-                    <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-4">El REPOMO: El Corazón del Ajuste</h2>
-                    <p>El Resultado por Posición Monetaria representa la pérdida o ganancia que una entidad experimenta por mantener activos y pasivos monetarios durante un periodo de inflación. Si los pasivos monetarios superan a los activos (posición pasiva), la entidad obtiene una <strong>ganancia</strong> por inflación, ya que pagará sus deudas con dinero de menor poder adquisitivo.</p>
+              <div>
+                <label class="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-widest text-xs">Frecuencia de Capitalización</label>
+                <select id="calc-tasa-frec" class="w-full px-6 py-5 rounded-2xl border border-gray-200 focus:ring-4 focus:ring-brand-gold/20 focus:border-brand-gold transition-all bg-gray-50 focus:bg-white text-xl font-medium cursor-pointer appearance-none">
+                  <option value="12">Mensual (12 periodos)</option>
+                  <option value="6">Bimestral (6 periodos)</option>
+                  <option value="4">Trimestral (4 periodos)</option>
+                  <option value="2">Semestral (2 periodos)</option>
+                  <option value="360">Diaria (360 periodos)</option>
+                </select>
+              </div>
 
-                    <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-4">Conclusión Académica</h2>
-                    <p>Para los alumnos de la <strong>UJAT</strong>, comprender la NIF B-10 es vital no solo por la técnica contable, sino por la capacidad analítica que otorga sobre cómo la macroeconomía impacta directamente en balances aparentemente estáticos. Aunque actualmente México se encuentra en un entorno no inflacionario para fines de esta norma (generalmente), la vigilancia constante de los índices es responsabilidad del contador profesional.</p>
-                </div>
+              <p id="tasa-error" class="text-red-500 font-semibold text-sm hidden mt-2"></p>
+            </div>
 
-                <div class="mt-16 pt-10 border-t border-gray-200">
-                    <a href="articulos.html" class="inline-flex items-center text-brand-blue font-bold hover:underline">
-                        &larr; Ver todos los artículos
-                    </a>
-                </div>
-            </article>
-        </main>
+            <div id="res-tasa" class="mt-12 p-10 bg-gradient-to-br from-[#0c233c] to-[#040f1a] rounded-3xl text-center relative z-10 shadow-2xl overflow-hidden border border-white/5">
+              <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+              <span class="block text-xs font-bold text-brand-gold-dark mb-3 uppercase tracking-[0.2em] relative z-10 flex items-center justify-center gap-3">
+                 <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span> Resultado de Conversión
+              </span>
+              <span class="block font-playfair text-6xl font-bold text-white mb-4 drop-shadow-md relative z-10 transition-all duration-300" id="txt-tasa-res">0.00%</span>
+              <div class="flex flex-col gap-2 relative z-10">
+                <span class="inline-block text-sm font-mono text-brand-gold/80 bg-white/5 px-4 py-2 rounded-full empty:hidden mx-auto" id="txt-tasa-detail"></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-12 p-8 bg-brand-blue/5 rounded-2xl border border-brand-blue/10">
+              <h4 class="font-bold text-brand-blue mb-2 flex items-center gap-2">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  Nota Académica (NIIF 9)
+              </h4>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                  Bajo la <strong>NIIF 9 Instrumentos Financieros</strong>, el método del interés efectivo es indispensable para calcular el costo amortizado de un activo o pasivo financiero. La tasa de interés efectiva es la tasa de descuento que iguala exactamente los flujos de efectivo futuros estimados a lo largo de la vida esperada del instrumento con su valor en libros.
+              </p>
+          </div>
+      </main>
 
-        <!-- Footer -->
-            <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
+      <!-- Footer -->
+      <footer class="bg-[#040f1a] border-t border-gray-800 text-gray-300 pt-16 pb-8" id="contacto">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <!-- Brand Info -->
@@ -160,7 +189,7 @@
             <ul class="space-y-2 text-sm">
               <li><a href="sobre-nosotros.html" class="hover:text-brand-gold transition-colors">Sobre Nosotros</a></li>
               <li><a href="articulos.html" class="hover:text-brand-gold transition-colors">Artículos</a></li>
-              <li><a href="herramientas-calculadoras.html" class="hover:text-brand-gold transition-colors">Calculadoras</a></li>
+              <li><a href="herramientas-calculadoras.html" class="hover:text-brand-gold transition-colors">Herramientas</a></li>
               <li><a href="guia-usuario.html" class="hover:text-brand-gold transition-colors">Guía de Uso</a></li>
             </ul>
           </div>
@@ -206,8 +235,9 @@
     </footer>
 
     </div>
-<script type="module" src="src/main.js"></script>
+
+    <!-- Script logic -->
+    <script type="module" src="src/calculadoras.js"></script>
+  <script type="module" src="src/main.js"></script>
 </body>
 </html>
-
-
